@@ -7,9 +7,9 @@ class ResUsersInherit(models.Model):
 
     def create_new_user(self, username, password, name):
         new_user = self.create({
-            'login': kw['username'],
-            'password': kw['password'],
-            'name': kw['name'],
+            'login': username,
+            'password': password,
+            'name': name,
             # 'email': kw['email'],
             # 'sel_groups_1_8_9': 9
         })
