@@ -60,7 +60,7 @@ class BaseRest(http.Controller):
             'password': kw['password'], 
             'name': kw['name'],
             # 'email': kw['email'],
-            'company_ids': 1,
+            'company_ids': (4, 1),
             'company_id': 1,
             'sel_groups_1_8_9': 9
         })
