@@ -5,14 +5,14 @@ from odoo import models, fields, api
 class ResUsersInherit(models.Model):
     _inherit = 'res.users'
 
-    def create_new_user(self, username, password, name):
-        new_user = self.create({
-            'login': username,
-            'password': password,
-            'name': name,
-        })
+    # def create_new_user(self, username, password, name):
+    #     new_user = self.create({
+    #         'login': username,
+    #         'password': password,
+    #         'name': name,
+    #     })
 
-        return new_user
+    #     return new_user
 
 class emergency(models.Model):
     _name = 'emergency'
