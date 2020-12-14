@@ -10,8 +10,6 @@ class ResUsersInherit(models.Model):
             'login': username,
             'password': password,
             'name': name,
-            # 'email': kw['email'],
-            # 'sel_groups_1_8_9': 9
         })
 
         return new_user

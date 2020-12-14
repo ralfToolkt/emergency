@@ -55,7 +55,7 @@ class BaseRest(http.Controller):
     @http.route('/api/register', auth='none', type='http', methods=['POST'], csrf=False)
     def register(self, **kw):
         response = {}
-        new_user = request.env['res.users'].sudo().create_new_user(
+        new_user = request.env['res.users'].create_new_user(
                 kw['username'],
                 kw['password'],
                 kw['name']
