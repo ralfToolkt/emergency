@@ -5,6 +5,10 @@ from odoo import models, fields, api
 class ResUsersInherit(models.Model):
     _inherit = 'res.users'
 
+    token = fields.Char(
+        string='token',
+    )
+
     # def create_new_user(self, username, password, name):
     #     new_user = self.create({
     #         'login': username,
