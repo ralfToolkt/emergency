@@ -9,14 +9,60 @@ class ResUsersInherit(models.Model):
         string='token',
     )
 
-    # def create_new_user(self, username, password, name):
-    #     new_user = self.create({
-    #         'login': username,
-    #         'password': password,
-    #         'name': name,
-    #     })
+class Location(models.Model):
+    _name = 'Location'
+    _description = 'Location that send by the emergency button'
 
-    #     return new_user
+    
+    date_time = fields.Datetime(
+        string='Date Time',
+        default=fields.Datetime.now,
+    )
+    
+    
+    longitude = fields.Float(
+        string='longitude',
+    )
+    
+    latitude = fields.Float(
+        string='latitude',
+    )
+    
+    city = fields.Char(
+        string='city',
+    )
+    
+    country = fields.Char(
+        string='country',
+    )
+    
+    district = fields.Char(
+        string='district',
+    )
+    
+    isoCountryCode = fields.Char(
+        string='isoCountryCode',
+    )
+    
+    name = fields.Char(
+        string='name',
+    )
+    
+    postalCode = fields.Char(
+        string='postalCode',
+    )
+    
+    region = fields.Char(
+        string='region',
+    )
+    
+    street = fields.Char(
+        string='street',
+    )
+
+    
+    
+    
 
 class emergency(models.Model):
     _name = 'emergency'
@@ -26,8 +72,4 @@ class emergency(models.Model):
     longitude = fields.Float()
     latitude = fields.Float()
     accuracy = fields.Float()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+

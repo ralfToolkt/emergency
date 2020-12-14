@@ -73,6 +73,12 @@ class BaseRest(http.Controller):
         return request.make_response(json.dumps(response), [('Access-Control-Allow-Origin', '*')])
 
 
+    @http.route('/api/location', auth='none', type='http', methods=['POST'], csrf=False)
+    def location(self, **kw):
+        response = {}
+        
+
+
 # class Emergency(http.Controller):
 #     @http.route('/emergency/emergency/', auth='public')
 #     def index(self, **kw):
