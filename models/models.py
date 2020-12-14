@@ -10,7 +10,7 @@ class ResUsersInherit(models.Model):
     )
 
 class Location(models.Model):
-    _name = 'Location'
+    _name = 'location'
     _description = 'Location that send by the emergency button'
 
     
