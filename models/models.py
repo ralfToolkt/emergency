@@ -22,7 +22,7 @@ class Location(models.Model):
     
     user_id = fields.Many2one(
         string='user',
-        comodel_name='location',
+        comodel_name='res.users',
     )
     
     
