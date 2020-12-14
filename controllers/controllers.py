@@ -61,7 +61,7 @@ class BaseRest(http.Controller):
             'name': kw['name'],
             # 'email': kw['email'],
             'company_id': 1,
-            'sel_groups_1_8_9': '9'
+            'sel_groups_1_8_9': 9
         })
         if new_user:
             response['result'] = 'success'
