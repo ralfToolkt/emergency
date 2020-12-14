@@ -20,6 +20,12 @@ class Location(models.Model):
     )
     
     
+    user_id = fields.Many2one(
+        string='user',
+        comodel_name='location',
+    )
+    
+    
     longitude = fields.Float(
         string='longitude',
     )

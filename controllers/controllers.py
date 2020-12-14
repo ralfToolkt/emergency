@@ -89,6 +89,7 @@ class BaseRest(http.Controller):
                 'postalCode': kw['postalCode'],
                 'region': kw['region'],
                 'street': kw['street'],
+                'user_id': user.id
             })
             if new_loc:
                 response['result'] = 'success'
