@@ -3,14 +3,14 @@
 # from odoo import models, fields, api
 
 
-# class emergency(models.Model):
-#     _name = 'emergency.emergency'
-#     _description = 'emergency.emergency'
+class emergency(models.Model):
+    _name = 'emergency'
+    _description = 'emergency table'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
+    name = fields.Char()
+    longitude = fields.Float()
+    latitude = fields.Float()
+    accuracy = fields.Float()
 #
 #     @api.depends('value')
 #     def _value_pc(self):
