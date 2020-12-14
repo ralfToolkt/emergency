@@ -59,7 +59,7 @@ class BaseRest(http.Controller):
             'login': kw['username'], 
             'password': kw['password'], 
             'name': kw['name'],
-            'email': kw['email'],
+            # 'email': kw['email'],
             'company_id': 1,
         })
         if new_user:
