@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_emergency_emergency,emergency.emergency,model_emergency_emergency,base.group_user,1,1,1,1
+access_location,name_location,model_location,base.group_user,1,1,1,1

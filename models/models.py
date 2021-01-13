@@ -55,7 +55,7 @@ class Location(models.Model):
     )
     
     postalCode = fields.Char(
-        string='postalCode',
+        string='Postal Code',
     )
     
     region = fields.Char(
