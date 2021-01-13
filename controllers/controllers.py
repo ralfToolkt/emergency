@@ -99,6 +99,31 @@ class BaseRest(http.Controller):
             response['result'] = 'error'
         return request.make_response(json.dumps(response), [('Access-Control-Allow-Origin', '*')])
 
+    @http.route('/api/location/username', auth='none', type='http', methods=['POST'], csrf=False)
+    def location_username(self, **kw):
+        response = {}
+        user = request.env['res.users'].sudo().search([('login', '=', kw['username'])])
+        if user:
+            new_loc = request.env['location'].with_user(1).create({
+                'longitude': kw['longitude'],
+                'latitude': kw['latitude'],
+                'city': kw['city'],
+                'country': kw['country'],
+                'district': kw['district'],
+                'isoCountryCode': kw['isoCountryCode'],
+                'name': kw['name'],
+                'postalCode': kw['postalCode'],
+                'region': kw['region'],
+                'street': kw['street'],
+                'user_id': user.id
+            })
+            if new_loc:
+                response['result'] = 'success'
+            else:
+                response['result'] = 'failed'
+        else:
+            response['result'] = 'error'
+        return request.make_response(json.dumps(response), [('Access-Control-Allow-Origin', '*')])
 
 # class Emergency(http.Controller):
 #     @http.route('/emergency/emergency/', auth='public')
